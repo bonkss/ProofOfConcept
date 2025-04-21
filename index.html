@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js"></script>
 </head>
-<body>
+<body style = "background-color: #4169e1">
+    <!--
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -17,34 +18,49 @@
             <li><a href="cv.html">CV</a></li>
         </ul>
     </nav>
+     -->
 
     <div class="content">
         <!-- Home Page Content -->
         <div id="home">
             <div class="home-content">
-                <div class="image">
-                    <img src="images/AnnuskaZolyomi line drawing.png" alt="Line drawing of smiling woman">
-                </div>
-                <div class="info">
-                    <h1>Annuska Zolyomi</h1>
-                    <p>Assistant Professor at UW Bothell in the <a href="https://www.uwb.edu/stem/about/divisions/css">Division of Computing & Software Systems</a></p>
+
+                <div class="info"> 
+                    <h1 style = "text-align: center;">HELLO CLASSMATES!</h1> 
+                    <!--<p>Assistant Professor at UW Bothell in the <a href="https://www.uwb.edu/stem/about/divisions/css">Division of Computing & Software Systems</a></p>-->
+                    <div class="image">
+                        <img src="images/DrawingOfMe.jpg" alt="Drawing of Bonkss" width = "200">
+                    </div>
+
+                    <p>This is Bonkss (Bianca)☝️ </p>
                 </div>
             </div>
         </div>
     </div>
     
     <!-- Placeholder Content for Other Pages -->
-    <div id="research" class="content">
-        <h1>Research</h1>
-        <p>Research content goes here.</p>
-    </div>
+    <div id="WhoAmI" class="content">
+        <h1>Who Am I?</h1>
+        <p>CSS 480 Student, cat obsessed, UWB student. When I move out and get my own place, I WILL be getting a:</p>
+            <ul id="pets">
+                <li>Orange Cat</li>
+                <li>Black Cat</li>
+                <li>White Cat</li>
+            </ul>
+        <p>In no particular order.</p>
+        <button onclick="randCats()">Sort Kitties</button>
+        <p>I also want a ball python, but many of my friends and family are afraid of snakes.</p>
+        <p>I still want want them to come over to my house so I'll probably have to hold off on a snake (for now)</p>
+        <p>Other things I'm interested in besides cats and snakes are: Tetris attack and Trader Joes Buffalo Dip </p>
 
+    </div>
+<!--
     <div id="teaching" class="content">
         <h1>Teaching</h1>
         <p>I teach the following classes.</p>
         <ul id="pastCourses">
-            <li>CSS 350 Management Principles for Computing Professionals</li>
-            <li>CSS 360 Software Engineering</li>
+            <li>CSS 350 Management PrComputing Professionals</li>
+            <li>CSS 360 Sgineering</li>
             <li>CSS 370 Analysis and Design</li>
             <li>CSS 478 Usability and User Centered Design</li>
             <li>CSS 480 Principles of Human Computer Interaction</li>
@@ -66,7 +82,19 @@
         <h1>CV</h1>
         <p>CV content goes here.</p>
     </div>
+-->
 
+    <!--https://www.youtube.com/watch?v=NzWFbRMxKaM-->
+    <script type="text/javascript">
+        function randCats() {
+            var ul = document.getElementById("pets")
+            for(var i =ul.children.length; i > 0; i-- ) {
+                ul.appendChild(ul.children[Math.random() * i|0])
+            } 
+
+        }
+
+    </script>
 
 </body>
 </html>

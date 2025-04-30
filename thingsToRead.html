@@ -96,16 +96,18 @@
     <!--https://stackoverflow.com/questions/50257057/how-to-navigate-through-li-elements-using-arrow-keys-jquery-->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-          // Select the first <ul> inside #thingsToRead
+          // Selecting elements 
           const ul = document.querySelector("#thingsToRead ul");
           const listItems = ul.querySelectorAll("li");
-      
-          if (listItems.length === 0) return;
-      
+
+          //tracking where we are in the list 
           let currentIndex = 0;
+            
+          //Usability: feedback. making sure the user can see where they are in the list 
           listItems[currentIndex].classList.add("highlight");
           listItems[currentIndex].querySelector("a").focus();
       
+            //arrow inputs that we are listening for 
           document.addEventListener("keydown", function (event) {
             if (event.key === "ArrowDown" || event.key === "ArrowUp") {
               listItems[currentIndex].classList.remove("highlight");
@@ -121,7 +123,8 @@
       
               event.preventDefault(); // Stop page from scrolling
             }
-      
+            
+            //Enter to select interactactable element as a click 
             if (event.key === "Enter") {
               const link = listItems[currentIndex].querySelector("a");
               if (link) link.click();

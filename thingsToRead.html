@@ -120,8 +120,9 @@
       
               listItems[currentIndex].classList.add("highlight");
               listItems[currentIndex].querySelector("a").focus();
-      
-              event.preventDefault(); // Stop page from scrolling
+            
+              //so that the arrow keys dont start scrolling the page instead of navigating the list 
+              event.preventDefault();
             }
             
             //Enter to select interactactable element as a click 
